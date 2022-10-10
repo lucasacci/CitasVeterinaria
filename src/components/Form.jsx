@@ -15,7 +15,7 @@ export const Form = () => {
   const [hora, setHora] = useState('');
   const [sintomas, setSintomas] = useState("");
 
-  const datosLs = JSON.parse(localStorage.getItem("mascotas")|| []);
+  const datosLs = JSON.parse(localStorage.getItem("mascotas")) || [];
 
   const [mascotas, setMascotas] = useState(datosLs);
 
@@ -26,7 +26,7 @@ export const Form = () => {
 
   }, [mascotas])
   
-  console.log(mascotas);
+
 
   const handleSubmit = (e) =>{
     e.preventDefault();
